@@ -1,0 +1,24 @@
+.container {
+  width: var(--width-sidebar);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  padding-right: 16px;
+}
+
+.link {
+  align-items: center;
+  border-radius: 0 50dvmax 50dvmax 0;
+  display: flex;
+  font-size: 1.6rem;
+  font-weight: 700;
+  gap: 12px;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.active {
+  background: var(--color-surface-dark);
+}

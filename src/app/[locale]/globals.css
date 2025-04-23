@@ -1,0 +1,102 @@
+@import "ress";
+
+:root {
+  /* 背景（メイン） */
+  --color-bg: #0d0d0d;
+  /* 背景（メイン・ダーク） */
+  --color-bg-dark: #1a1a1a;
+  /* 背景（サブ・ダーク） */
+  --color-surface-dark: #2a2a2a;
+  /* 枠・ボーダー */
+  --color-border: #2e2e2e;
+  /* テキスト（通常） */
+  --color-text: #e0e0e0;
+  /* テキスト（サブ） */
+  --color-muted: #888888;
+  /* アクセントカラー */
+  --color-accent: #4c82f7;
+
+  --height-header: 64px;
+  --width-sidebar: 256px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 1.4rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+}
+
+article,
+footer,
+header,
+main,
+section {
+  container-type: inline-size;
+}
+
+button {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  margin: 0;
+}
+
+canvas,
+img,
+picture,
+svg,
+video {
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-style: italic;
+  height: auto;
+  max-width: 100%;
+  pointer-events: none;
+  shape-margin: 1rem;
+  vertical-align: middle;
+}
+
+figcaption,
+li,
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+input,
+textarea {
+  min-width: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}

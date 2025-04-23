@@ -1,0 +1,4 @@
+.container {
+  height: calc(100% - 12px);
+  padding-right: 12px;
+}

@@ -1,0 +1,18 @@
+.wrapper {
+  background: var(--color-surface-dark);
+  height: 100%;
+  overflow: hidden auto;
+  width: 100%;
+}
+
+.scroller {
+  position: relative;
+  width: 100%;
+}
+
+.item {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
