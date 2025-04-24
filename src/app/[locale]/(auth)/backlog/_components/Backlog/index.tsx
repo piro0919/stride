@@ -1,4 +1,3 @@
-// PBIList.tsx
 "use client";
 import { useState } from "react";
 import VirtualPbiList from "../VirtualPbiList";
@@ -23,7 +22,10 @@ export default function Backlog(): React.JSX.Element {
 
   return (
     <div className={styles.container}>
-      <VirtualPbiList items={items} onReorder={handleReorder} />
+      <div className={styles.header}>aaa</div>
+      <div className={styles.listContainer}>
+        <VirtualPbiList items={items} onReorder={handleReorder} />
+      </div>
     </div>
   );
 }

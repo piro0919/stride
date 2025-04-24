@@ -6,6 +6,9 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Open_Sans } from "next/font/google";
 import { notFound } from "next/navigation";
+import "@szhsin/react-menu/dist/index.css";
+import "@szhsin/react-menu/dist/theme-dark.css";
+import "@szhsin/react-menu/dist/transitions/zoom.css";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -35,7 +38,6 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }>): Promise<React.JSX.Element> {
-  // Ensure that the incoming `locale` is valid
   const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {

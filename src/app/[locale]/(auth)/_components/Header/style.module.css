@@ -1,5 +1,9 @@
 .container {
+  align-items: center;
+  display: flex;
+  gap: 16px;
   height: var(--height-header);
+  padding-right: 16px;
 }
 
 .logoWrapper {
@@ -9,4 +13,20 @@
   justify-content: center;
   padding-right: 16px;
   width: var(--width-sidebar);
+}
+
+.menuButton {
+  align-items: center;
+  background: var(--color-surface-dark);
+  border-radius: 50dvmax;
+  display: flex;
+  font-weight: 700;
+  gap: 4px;
+  height: 32px;
+  padding: 0 16px 0 12px;
+}
+
+.userIconContainer {
+  border-radius: 50dvmax;
+  overflow: hidden;
 }

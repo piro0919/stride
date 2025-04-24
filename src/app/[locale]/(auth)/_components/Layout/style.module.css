@@ -5,6 +5,7 @@
 .headerContainer {
   inset: 0 0 auto 0;
   position: fixed;
+  z-index: 1;
 }
 
 .aside {

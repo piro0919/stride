@@ -1,3 +1,4 @@
+import { Link } from "@/i18n/navigation";
 import { useSortable } from "@dnd-kit/sortable";
 import clsx from "clsx";
 import styles from "./style.module.css";
@@ -16,18 +17,20 @@ export default function PbiItem({
   const { attributes, listeners, setNodeRef, transform } = useSortable({ id });
 
   return (
-    <div
-      className={clsx(styles.pbiItem, {
-        [styles.dragging]: isDragging,
-      })}
-      style={{
-        transform: transform ? `translateY(${transform.y}px)` : undefined,
-      }}
-      ref={setNodeRef}
-      {...attributes}
-      {...listeners}
-    >
-      {title}
-    </div>
+    <Link href={`/backlog/${id}`}>
+      <div
+        className={clsx(styles.pbiItem, {
+          [styles.dragging]: isDragging,
+        })}
+        style={{
+          transform: transform ? `translateY(${transform.y}px)` : undefined,
+        }}
+        ref={setNodeRef}
+        // {...attributes}
+        // {...listeners}
+      >
+        {title}
+      </div>
+    </Link>
   );
 }
