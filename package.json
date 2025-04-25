@@ -7,12 +7,16 @@
     "@tanstack/react-virtual": "3.13.6",
     "clsx": "2.1.1",
     "feather-icons-react": "0.8.1",
+    "motion": "12.9.1",
     "next": "15.3.1",
     "next-intl": "4.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-resizable": "3.0.5",
     "react-spacer": "1.3.0",
+    "react-use-measure": "2.1.7",
     "ress": "5.0.2",
+    "usehooks-ts": "3.1.1",
     "zod": "3.24.3"
   },
   "devDependencies": {
@@ -26,6 +30,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/react-resizable": "3.0.8",
     "@typescript-eslint/eslint-plugin": "8.27.0",
     "@typescript-eslint/parser": "8.27.0",
     "@uphold/commitlint-config": "1.1.1",
@@ -61,6 +66,10 @@
   },
   "name": "stride",
   "overrides": {
+    "feather-icons-react": {
+      "react": "^19.0.0",
+      "react-dom": "^19.0.0"
+    },
     "stylelint-css-modules-no-global-scoped-selector": {
       "stylelint": "16.16.0"
     },

@@ -17,7 +17,7 @@ export default function PbiItem({
   const { attributes, listeners, setNodeRef, transform } = useSortable({ id });
 
   return (
-    <Link href={`/backlog/${id}`}>
+    <Link href={`/backlog/${id}`} shallow={true}>
       <div
         className={clsx(styles.pbiItem, {
           [styles.dragging]: isDragging,

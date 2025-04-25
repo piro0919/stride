@@ -1,0 +1,5 @@
+.container {
+  background: var(--color-bg-dark);
+  height: 100%;
+  overflow: hidden auto;
+}

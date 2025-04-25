@@ -1,16 +1,17 @@
 .container {
-  height: calc(100% - 16px);
-  padding-right: 16px;
+  --header-height: 48px;
+  height: 100%;
 }
 
 .header {
   align-items: center;
   background: var(--color-surface-dark);
   display: flex;
-  height: 48px;
+  height: var(--header-height);
   padding: 0 16px;
 }
 
 .listContainer {
-  height: calc(100% - 48px);
+  height: calc(100% - var(--header-height));
+  overflow: hidden auto;
 }

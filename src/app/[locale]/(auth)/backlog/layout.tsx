@@ -1,4 +1,5 @@
 import { type ReactNode } from "react";
+import BacklogLayout from "./_components/Layout";
 
 export type LayoutProps = {
   children: ReactNode;
@@ -9,10 +10,5 @@ export default function Layout({
   children,
   detail,
 }: LayoutProps): React.JSX.Element {
-  return (
-    <>
-      {children}
-      {detail}
-    </>
-  );
+  return <BacklogLayout detail={detail}>{children}</BacklogLayout>;
 }

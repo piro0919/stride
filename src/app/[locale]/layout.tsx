@@ -9,6 +9,7 @@ import { notFound } from "next/navigation";
 import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/theme-dark.css";
 import "@szhsin/react-menu/dist/transitions/zoom.css";
+import "react-resizable/css/styles.css";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
