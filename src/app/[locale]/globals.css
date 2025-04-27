@@ -1,24 +1,9 @@
 @import "ress";
 
 :root {
-  /* 背景（メイン） */
-  --color-bg: #0d0d0d;
-  /* 背景（メイン・ダーク） */
-  --color-bg-dark: #1a1a1a;
-  /* 背景（サブ・ダーク） */
-  --color-surface-dark: #2a2a2a;
-  --color-surface-dark-rgb: 42, 42, 42;
-  /* 枠・ボーダー */
-  --color-border: #2e2e2e;
-  /* テキスト（通常） */
-  --color-text: #e0e0e0;
-  /* テキスト（サブ） */
-  --color-muted: #888888;
-  /* アクセントカラー */
-  --color-accent: #4c82f7;
-
   --height-header: 64px;
   --width-sidebar: 256px;
+  --width-sidebar-shrink: 42px;
 }
 
 html {
@@ -30,11 +15,12 @@ html:focus-within {
 }
 
 body {
-  background: var(--color-bg);
-  color: var(--color-text);
+  background: #1b1b1b;
+  color: rgb(227 227 227);
   font-size: 1.4rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* overflow: hidden; */
 }
 
 a {

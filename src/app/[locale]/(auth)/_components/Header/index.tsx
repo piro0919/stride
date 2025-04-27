@@ -5,10 +5,23 @@ import Image from "next/image";
 import Spacer from "react-spacer";
 import styles from "./style.module.css";
 
-export default function Header(): React.JSX.Element {
+export type HeaderProps = {
+  disabledNew: boolean;
+  setModalContent: (modalContent: "productBacklog") => void;
+  toggleIsShrink: () => void;
+};
+
+export default function Header({
+  disabledNew,
+  setModalContent,
+  toggleIsShrink,
+}: HeaderProps): React.JSX.Element {
   return (
     <header className={styles.container}>
       <div className={styles.logoWrapper}>
+        <button onClick={() => toggleIsShrink()}>
+          <FeatherIcon color="#fff" icon="menu" size={18} />
+        </button>
         <Link href="/">
           <Image
             alt="Stride"
@@ -22,7 +35,7 @@ export default function Header(): React.JSX.Element {
       <Spacer grow={1} />
       <Menu
         menuButton={
-          <MenuButton className={styles.menuButton}>
+          <MenuButton className={styles.menuButton} disabled={disabledNew}>
             <FeatherIcon color="#fff" icon="plus" size={18} />
             <span>作成</span>
           </MenuButton>
@@ -33,9 +46,14 @@ export default function Header(): React.JSX.Element {
         theming="dark"
         transition={true}
       >
-        <MenuItem>プロダクトバックログアイテムを作成</MenuItem>
-        <MenuItem>スプリントを作成</MenuItem>
-        <MenuItem>エピックを作成</MenuItem>
+        <MenuItem
+          onClick={() => setModalContent("productBacklog")}
+          value="productBacklogItem"
+        >
+          プロダクトバックログアイテム
+        </MenuItem>
+        <MenuItem>スプリント</MenuItem>
+        <MenuItem>エピック</MenuItem>
       </Menu>
       <div className={styles.userIconContainer}>
         <Image alt="" height={32} src="/sample-user-icon.jpg" width={32} />

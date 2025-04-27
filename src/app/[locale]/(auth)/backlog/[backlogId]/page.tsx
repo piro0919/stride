@@ -1,3 +1,5 @@
+import BacklogDetail from "@/components/BacklogDetail";
+
 export default function Page(): React.JSX.Element {
-  return <div>hhhh</div>;
+  return <BacklogDetail />;
 }

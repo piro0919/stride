@@ -1,12 +1,21 @@
-.pbiItem {
-  background: var(--color-bg-dark);
-  border-radius: 4px;
+.container {
+  align-items: center;
+  background: #131314;
   box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
-  cursor: grab;
-  height: 28px;
-  line-height: 28px;
-  padding: 0 16px;
+  display: flex;
+  height: 36px;
+  line-height: 36px;
   transition: box-shadow 0.2s;
+}
+
+.iconContainer {
+  cursor: grab;
+  padding: 0 8px;
+}
+
+.link {
+  flex-grow: 1;
+  text-decoration: none;
 }
 
 .dragging {

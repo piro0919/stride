@@ -4,21 +4,35 @@
 }
 
 .inner {
+  border-radius: 16px 0 0 0;
   height: 100%;
+  overflow: hidden;
 }
 
-.detailContainer {
-  height: 100%;
+.resizableBoxContainer {
   inset: 0 0 0 auto;
-  padding-left: 15px;
   position: absolute;
+  z-index: 999;
+}
+
+.resizableBox {
+  background: #1b1b1b;
+  height: 100%;
+  padding: 0 10px 10px 10px;
+  position: relative;
 }
 
 .handle {
   align-items: center;
-  background: var(--color-border);
   cursor: col-resize;
   display: flex;
   inset: 0 auto 0 0;
   position: absolute;
+}
+
+.detailContainer {
+  border-radius: 16px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
 }

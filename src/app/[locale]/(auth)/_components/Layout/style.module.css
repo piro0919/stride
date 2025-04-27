@@ -14,8 +14,13 @@
 }
 
 .main {
-  height: calc(100% - var(--height-header) - 16px);
-  inset: var(--height-header) 16px 0 var(--width-sidebar);
+  height: calc(100% - var(--height-header));
+  inset: var(--height-header) 0 0 var(--width-sidebar);
   overflow: hidden;
   position: fixed;
+  transition: inset 250ms;
+}
+
+.shrink {
+  inset: var(--height-header) 0 0 var(--width-sidebar-shrink);
 }

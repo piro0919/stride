@@ -1,0 +1,48 @@
+.overlray {
+  --header-height: 36px;
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: 1;
+}
+
+.inner {
+  display: inline-block;
+  pointer-events: auto;
+  width: 600px;
+}
+
+.header {
+  align-items: center;
+  background: #37393b;
+  border-radius: 12px 12px 0 0;
+  box-shadow:
+    rgb(0 0 0 / 0.14) 0px 3px 4px 0px,
+    rgb(0 0 0 / 0.12) 0px 3px 3px -2px,
+    rgb(0 0 0 / 0.2) 0px 1px 8px 0px;
+  cursor: grab;
+  display: flex;
+  gap: 8px;
+  height: var(--header-height);
+  padding: 0 12px;
+}
+
+.h1 {
+  font-size: 1.4rem;
+}
+
+.content {
+  background: #1e1f20;
+  border-radius: 0 0 12px 12px;
+  box-shadow:
+    rgb(0 0 0 / 0.14) 0px 3px 4px 0px,
+    rgb(0 0 0 / 0.12) 0px 3px 3px -2px,
+    rgb(0 0 0 / 0.2) 0px 1px 8px 0px;
+  max-height: calc(600px - var(--header-height));
+  overflow: hidden;
+  padding: 12px;
+}
+
+.shrink {
+  display: none;
+}

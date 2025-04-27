@@ -23,7 +23,7 @@ export default function VirtualPbiList({
   const rowVirtualizer = useVirtualizer({
     count: items.length,
     // アイテムの高さ（padding + margin込み）
-    estimateSize: () => 29,
+    estimateSize: () => 37,
     getScrollElement: () => parentRef.current,
     overscan: 5,
   });

@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { useSortable } from "@dnd-kit/sortable";
 import clsx from "clsx";
+import FeatherIcon from "feather-icons-react";
 import styles from "./style.module.css";
 
 export type PbiItemProps = {
@@ -17,20 +18,21 @@ export default function PbiItem({
   const { attributes, listeners, setNodeRef, transform } = useSortable({ id });
 
   return (
-    <Link href={`/backlog/${id}`} shallow={true}>
-      <div
-        className={clsx(styles.pbiItem, {
-          [styles.dragging]: isDragging,
-        })}
-        style={{
-          transform: transform ? `translateY(${transform.y}px)` : undefined,
-        }}
-        ref={setNodeRef}
-        // {...attributes}
-        // {...listeners}
-      >
-        {title}
+    <div
+      className={clsx(styles.container, {
+        [styles.dragging]: isDragging,
+      })}
+      style={{
+        transform: transform ? `translateY(${transform.y}px)` : undefined,
+      }}
+      ref={setNodeRef}
+    >
+      <div {...attributes} {...listeners} className={styles.iconContainer}>
+        <FeatherIcon color="#fff" icon="align-justify" size={18} />
       </div>
-    </Link>
+      <Link className={styles.link} href={`/backlog/${id}`}>
+        {title}
+      </Link>
+    </div>
   );
 }

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import VirtualPbiList from "../VirtualPbiList";
 import styles from "./style.module.css";
 
@@ -9,16 +9,19 @@ export default function Backlog(): React.JSX.Element {
       .fill(undefined)
       .map((_, index) => ({
         id: index.toString(),
-        title: "The State of Web Dev AI 2025 survey results are here",
+        title: `${index + 1}: プロジェクトの一覧を見ることができる`,
       })),
   );
-  const handleReorder = (newOrder: string[]): void => {
-    const reorderedItems = newOrder.map(
-      (id) => items.find((item) => item.id === id)!,
-    );
+  const handleReorder = useCallback(
+    (newOrder: string[]) => {
+      const reorderedItems = newOrder.map(
+        (id) => items.find((item) => item.id === id)!,
+      );
 
-    setItems(reorderedItems);
-  };
+      setItems(reorderedItems);
+    },
+    [items],
+  );
 
   return (
     <div className={styles.container}>
