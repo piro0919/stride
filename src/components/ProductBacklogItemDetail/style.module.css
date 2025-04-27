@@ -1,0 +1,6 @@
+.container {
+  background: #1e1f20;
+  height: 100%;
+  overflow: auto;
+  padding: 12px;
+}

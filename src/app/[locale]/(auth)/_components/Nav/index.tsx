@@ -27,6 +27,16 @@ export default function Nav({ isShrink }: NavProps): React.JSX.Element {
           </Link>
           <Link
             className={clsx(styles.link, {
+              [styles.active]: pathname === "/items",
+            })}
+            href="/backlog"
+          >
+            <FeatherIcon color="#fff" icon="check-square" size={18} />
+            {/* <span>Product Backlog</span> */}
+            <span>作業タスク</span>
+          </Link>
+          <Link
+            className={clsx(styles.link, {
               [styles.active]: pathname === "/sprints",
             })}
             href="/sprints"

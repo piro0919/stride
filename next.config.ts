@@ -1,5 +1,6 @@
 // eslint-disable-next-line filenames/match-regex
 import createNextIntlPlugin from "next-intl/plugin";
+import removeImports from "next-remove-imports";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -13,4 +14,4 @@ const nextConfig: NextConfig = {
 };
 const withNextIntl = createNextIntlPlugin();
 
-export default withNextIntl(nextConfig);
+export default removeImports()(withNextIntl(nextConfig));

@@ -1,7 +1,6 @@
 .container {
   background: #1e1f20;
   height: 100%;
-  /* min-width: 375px; */
   overflow: auto;
-  padding: 12px;
+  padding: 24px 24px 240px;
 }

@@ -47,7 +47,12 @@ export default function Layout({
             <ResizableBox
               handle={
                 <div className={styles.handle}>
-                  <FeatherIcon color="#fff" icon="code" size={10} />
+                  <FeatherIcon
+                    className={styles.icon}
+                    color="#fff"
+                    icon="more-vertical"
+                    size={16}
+                  />
                 </div>
               }
               onResizeStop={(_, data) => {

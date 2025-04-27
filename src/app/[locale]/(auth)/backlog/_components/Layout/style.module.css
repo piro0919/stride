@@ -27,6 +27,13 @@
   cursor: col-resize;
   display: flex;
   inset: 0 auto 0 0;
+  justify-content: center;
+  position: absolute;
+  width: 10px;
+}
+
+.icon {
+  max-width: 16px;
   position: absolute;
 }
 

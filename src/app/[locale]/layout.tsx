@@ -10,6 +10,9 @@ import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/theme-dark.css";
 import "@szhsin/react-menu/dist/transitions/zoom.css";
 import "react-resizable/css/styles.css";
+import "@uiw/react-md-editor/markdown-editor.css";
+import "@uiw/react-markdown-preview/markdown.css";
+import "react-select-search/style.css";
 
 const openSans = Open_Sans({
   subsets: ["latin"],

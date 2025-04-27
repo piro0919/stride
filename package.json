@@ -1,19 +1,25 @@
 {
   "dependencies": {
+    "@bprogress/next": "3.2.12",
     "@dnd-kit/core": "6.3.1",
     "@dnd-kit/sortable": "10.0.0",
+    "@mpth/react-no-ssr": "1.0.1",
     "@szhsin/react-menu": "4.4.0",
     "@t3-oss/env-nextjs": "0.12.0",
     "@tanstack/react-virtual": "3.13.6",
+    "@uiw/react-md-editor": "4.0.5",
     "clsx": "2.1.1",
     "feather-icons-react": "0.8.1",
     "motion": "12.9.1",
     "next": "15.3.1",
     "next-intl": "4.0.3",
+    "next-remove-imports": "1.0.12",
     "react": "^19.0.0",
+    "react-collapsed": "4.2.0",
     "react-dom": "^19.0.0",
     "react-draggable": "4.4.6",
     "react-resizable": "3.0.5",
+    "react-select-search": "4.1.8",
     "react-spacer": "1.3.0",
     "react-use-measure": "2.1.7",
     "ress": "5.0.2",
@@ -68,6 +74,10 @@
   "name": "stride",
   "overrides": {
     "feather-icons-react": {
+      "react": "^19.0.0",
+      "react-dom": "^19.0.0"
+    },
+    "react-select-search": {
       "react": "^19.0.0",
       "react-dom": "^19.0.0"
     },

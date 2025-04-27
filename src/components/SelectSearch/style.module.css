@@ -1,0 +1,17 @@
+.container :global(.select-search-container) {
+  width: 100%;
+}
+
+.container :global(.select-search-input) {
+  border: 1px solid #37393b;
+  border-radius: 4px;
+  color: inherit;
+  padding: 8px 12px;
+  background: #1e1f20;
+  font-size: 1.4rem;
+  height: 38px;
+}
+
+.container :global(.select-search-input):hover {
+  border-color: #37393b !important;
+}

@@ -1,5 +1,5 @@
-import BacklogDetail from "@/components/BacklogDetail";
+import ProductBacklogItemDetail from "@/components/ProductBacklogItemDetail";
 
 export default function Page(): React.JSX.Element {
-  return <BacklogDetail />;
+  return <ProductBacklogItemDetail />;
 }

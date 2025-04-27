@@ -1,7 +1,9 @@
 import DraggableModal, {
   type DraggableModalProps,
 } from "@/components/DraggableModal";
+import NewProductBacklogItemForm from "@/components/NewProductBacklogItemForm";
 import React from "react";
+import styles from "./style.module.css";
 
 export type ProductBacklogModalProps = Pick<
   DraggableModalProps,
@@ -18,23 +20,9 @@ export default function ProductBacklogModal({
       heading="プロダクトバックログアイテム"
       isOpen={isOpen}
     >
-      <form>
-        <input placeholder="タイトルを追加" />
-        <div>
-          <label>ペルソナ</label>
-          <select>
-            <option>aaa</option>
-          </select>
-        </div>
-        <div>
-          <label>I want do</label>
-          <input />
-        </div>
-        <div>
-          <label>So that</label>
-          <input />
-        </div>
-      </form>
+      <div className={styles.container}>
+        <NewProductBacklogItemForm />
+      </div>
     </DraggableModal>
   );
 }

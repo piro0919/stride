@@ -1,3 +1,4 @@
+import NoSSR from "@mpth/react-no-ssr";
 import clsx from "clsx";
 import FeatherIcon from "feather-icons-react";
 import { motion } from "motion/react";
@@ -45,45 +46,47 @@ export default function DraggableModal({
       className={styles.overlray}
       initial={{ opacity: 0 }}
     >
-      <Draggable
-        bounds={{
-          bottom: height - bounds.height,
-          left: 0,
-          right: width - bounds.width,
-          top: 0,
-        }}
-        defaultClassName={styles.inner}
-        defaultPosition={{ x: 0, y: height - bounds.height }}
-        handle={`.${styles.header}`}
-        key={String(!bounds.height)}
-        nodeRef={nodeRef}
-      >
-        <div className={styles.inner} ref={nodeRef}>
-          <div ref={ref}>
-            <header className={styles.header}>
-              <h1 className={styles.h1}>{heading}</h1>
-              <Spacer grow={1} />
-              <button onClick={() => toggleIsShrink()}>
-                <FeatherIcon
-                  color="#fff"
-                  icon={isShrink ? "square" : "minus"}
-                  size={18}
-                />
-              </button>
-              <button onClick={() => handleClose()}>
-                <FeatherIcon color="#fff" icon="x" size={18} />
-              </button>
-            </header>
-            <div
-              className={clsx(styles.content, {
-                [styles.shrink]: isShrink,
-              })}
-            >
-              {children}
+      <NoSSR>
+        <Draggable
+          bounds={{
+            bottom: height - bounds.height,
+            left: 0,
+            right: width - bounds.width,
+            top: 0,
+          }}
+          defaultClassName={styles.inner}
+          defaultPosition={{ x: 0, y: height - bounds.height }}
+          handle={`.${styles.header}`}
+          key={String(!bounds.height)}
+          nodeRef={nodeRef}
+        >
+          <div className={styles.inner} ref={nodeRef}>
+            <div ref={ref}>
+              <header className={styles.header}>
+                <h1 className={styles.h1}>{heading}</h1>
+                <Spacer grow={1} />
+                <button onClick={() => toggleIsShrink()}>
+                  <FeatherIcon
+                    color="#fff"
+                    icon={isShrink ? "square" : "minus"}
+                    size={18}
+                  />
+                </button>
+                <button onClick={() => handleClose()}>
+                  <FeatherIcon color="#fff" icon="x" size={18} />
+                </button>
+              </header>
+              <div
+                className={clsx(styles.content, {
+                  [styles.shrink]: isShrink,
+                })}
+              >
+                {children}
+              </div>
             </div>
           </div>
-        </div>
-      </Draggable>
+        </Draggable>
+      </NoSSR>
     </motion.div>
   );
 }
