@@ -5,12 +5,12 @@
     "@dnd-kit/sortable": "10.0.0",
     "@mpth/react-no-ssr": "1.0.1",
     "@szhsin/react-menu": "4.4.1",
-    "@t3-oss/env-nextjs": "0.13.6",
-    "@tanstack/react-virtual": "3.13.9",
+    "@t3-oss/env-nextjs": "0.13.8",
+    "@tanstack/react-virtual": "3.13.10",
     "@uiw/react-md-editor": "4.0.7",
     "clsx": "2.1.1",
     "feather-icons-react": "0.9.0",
-    "motion": "12.16.0",
+    "motion": "12.18.1",
     "next": "15.3.3",
     "next-intl": "4.1.0",
     "next-remove-imports": "1.0.12",
@@ -24,7 +24,7 @@
     "react-use-measure": "2.1.7",
     "ress": "5.0.2",
     "usehooks-ts": "3.1.1",
-    "zod": "3.25.56"
+    "zod": "3.25.64"
   },
   "devDependencies": {
     "@commitlint/cli": "19.8.1",
