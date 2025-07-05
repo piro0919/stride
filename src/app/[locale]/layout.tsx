@@ -8,6 +8,9 @@ import "./globals.css";
 import { Noto_Sans_JP } from "next/font/google";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import Layout from "./_components/Layout";
+import "@szhsin/react-menu/dist/index.css";
+import "@szhsin/react-menu/dist/transitions/zoom.css";
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
@@ -76,7 +79,10 @@ export default async function RootLayout({
       <html lang={locale} suppressHydrationWarning={true}>
         <body className={notoSansJP.className}>
           <NextIntlClientProvider>
-            <ThemeProvider enableSystem={false}>{children}</ThemeProvider>
+            {/* TODO: forcedTheme はあとで消す */}
+            <ThemeProvider enableSystem={false} forcedTheme="light">
+              <Layout>{children}</Layout>
+            </ThemeProvider>
           </NextIntlClientProvider>
         </body>
       </html>

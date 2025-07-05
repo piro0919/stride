@@ -3,7 +3,12 @@ import createMiddleware from "next-intl/middleware";
 import { routing } from "./i18n/routing";
 
 const intlMiddleware = createMiddleware(routing);
-const isPublicRoute = createRouteMatcher(["/(.*)", "/:locale/(.*)"]);
+const isPublicRoute = createRouteMatcher([
+  "/",
+  ...routing.locales.map((locale) => `/${locale}`),
+  "/(sign-in|sign-up)(.*)",
+  ...routing.locales.map((locale) => `/${locale}/(sign-in|sign-up)(.*)`),
+]);
 
 export default clerkMiddleware(async (auth, req) => {
   if (!isPublicRoute(req)) await auth.protect();

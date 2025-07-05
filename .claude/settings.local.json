@@ -1,0 +1,6 @@
+{
+  "permissions": {
+    "allow": ["Bash(claude doctor)", "Bash(npm run migrate:*)"],
+    "deny": []
+  }
+}

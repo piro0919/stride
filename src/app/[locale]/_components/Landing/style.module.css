@@ -1,0 +1,13 @@
+.container {
+  align-items: center;
+  display: flex;
+  height: 100dvh;
+  justify-content: center;
+}
+
+.logoImageContainer {
+  aspect-ratio: 3536 / 880;
+  filter: invert(1);
+  position: relative;
+  width: 480px;
+}
